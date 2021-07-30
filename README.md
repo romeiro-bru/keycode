@@ -5,7 +5,7 @@
 </p>
 
 ### Features :unicorn: 
-* Type and find the event keycode
+* Press any key and find the event keycode
 
 ### Technologies :mag_right:
 * React :sparkles:
