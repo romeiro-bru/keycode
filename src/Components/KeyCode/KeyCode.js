@@ -3,24 +3,28 @@ import { useState } from "react";
 import "./style.css";
 
 export function KeyCode() {
-  const [keyCode, setKeyCode] = useState("");
   const [eventCode, setEventCode] = useState("");
   const [eventKey, setEventKey] = useState("");
+  const [keyCode, setKeyCode] = useState("");
+  const [hide, setHide] = useState(true);
 
   useEffect(() => {
-    window.addEventListener("keydown", handleChange);
+    window.addEventListener("keydown", handleKeyDown);
   }, []);
 
-  const handleChange = (e) => {
-    setKeyCode(e.keyCode);
+  const handleKeyDown = (e) => {
     setEventCode(e.code);
     setEventKey(e.key);
+    setKeyCode(e.keyCode);
+    setHide(false);
   };
 
   return (
     <section className="inline-block">
-      {" "}
-      <section className="key-code">
+      <section hidden={!hide} className="key-code start">
+        <p>Press any key</p>
+      </section>
+      <section hidden={hide} className="key-code">
         <section className="events">
           <div className="event">
             <span className="event-header">event code</span>
