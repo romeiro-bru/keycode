@@ -1,4 +1,4 @@
-### Keyboard KeyCode
+### KeyCode
 
 <p  align="center">
 <img  src="https://media.giphy.com/media/l2Je5RcqWOxKPZDYk/giphy.gif"  height="180" alt="keyboard">
